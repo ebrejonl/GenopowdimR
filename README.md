@@ -2,18 +2,18 @@
 
 
 ### getting started
-'''r
+'''{r}
 install.github("ebrejonl/GenopowdimR")
 library(GenopowdimR)
 '''
 
 ### usage
-'''
+'''{r}
 
 '''
 
 ### example
-'''
+'''{r}
 
 '''
 ## cite
