@@ -1,4 +1,4 @@
-# GENOtyping by POWerful DIstance Matrix computation in C++
+# GENOtyping by POWerful DIstance Matrix in C++
 
 ### getting started
 '''r
