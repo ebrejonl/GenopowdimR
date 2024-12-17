@@ -5,7 +5,7 @@
 
 
 
-## Introduction:
+### Introduction:
 This package main purpose is to make genotyping microsatellite data, a process that can easily take days to weeks according to the number of loci and individuals, but making it almost instantaneous by utulizing the power of C++ for distance matrix calculation.
 
 In this package is included, 
@@ -15,10 +15,10 @@ In this package is included,
 
 
 
-## Getting started: 
+### Getting started: 
 
 
 
 
-## how to cite:
+### how to cite:
 If you use, please cite the accompagning paper : Brejon Lamartinière et al, 
