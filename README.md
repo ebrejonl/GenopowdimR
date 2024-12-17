@@ -16,7 +16,9 @@ Assigning genotypes to microsatellite data can easily take days to weeks to run,
 
 
 ### Getting started: 
-
+install the package with
+library(devtools)
+install_github("ebrejonl/GenopowdimR")
 
 
 
