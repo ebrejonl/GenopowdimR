@@ -6,7 +6,7 @@ library(parallel)
 library(parallelDist)
 library(Rcpp)
 
-sourceCpp("CPP2.cpp")
+sourceCpp("Cpp/CPP2.cpp")
 
 #'
 #'  @param df dataframe containing individuals in rows and loci in columns
