@@ -17,3 +17,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://ebrejonl.github.io/GenopowdimR/
