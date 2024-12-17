@@ -10,7 +10,7 @@ Assigning genotypes to microsatellite data can easily take days to weeks to run,
 
 #### In this package is included:
 - A genotype assignment function
-- A genotype discovery curve computation with bootstraps
+- A genotype ~ loci discovery curve (with bootstraps)
 - Probability of identity (adapted from Paetkau and Strobeck (1994)) -> in progress
 
 
