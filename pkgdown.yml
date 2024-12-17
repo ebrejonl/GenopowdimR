@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   GenopowdimR: GenopowdimR.html
-last_built: 2024-12-17T16:55Z
+last_built: 2024-12-17T17:02Z
 urls:
   reference: https://ebrejonl.github.io/GenopowdimR/reference
   article: https://ebrejonl.github.io/GenopowdimR/articles

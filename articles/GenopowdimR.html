@@ -60,6 +60,7 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ebrejonl.github.io/GenopowdimR/">GenopowdimR</a></span><span class="op">)</span></span></code></pre></div>
+<p>The genotype assignment function can be called with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span> <span class="co">#system.time(mydata_new_with_genotype &lt;- compute_genotype_labels(df = mydata, </span></span>
 <span> <span class="co">#                                      loci_column_start =15, ## The first locus column</span></span>
@@ -67,6 +68,40 @@
 <span> <span class="co">#                                      NA_weight = 0,  ## The importance of a "NA mismatch"</span></span>
 <span> <span class="co">#                                      n_thresholds = 2,</span></span>
 <span> <span class="co">#                                      min_common_loci =6)) </span></span></code></pre></div>
+<p>The discovery curve function can be called with:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span> <span class="co"># discov_curv &lt;- genotype_discovery_curve( mydata[,15:40], # genetics only</span></span>
+<span> <span class="co">#                                         max_loci = 13, # n microsatellites</span></span>
+<span> <span class="co">#                                         NA_weight = 0,</span></span>
+<span> <span class="co">#                                        n_thresholds = 3,</span></span>
+<span> <span class="co">#                                        n_bootstrap = 12,</span></span>
+<span> <span class="co">#                                        min_common_loci=1)) #Where to start the curve # Too much more than nb of loci don't make sense!</span></span></code></pre></div>
+<p>plotting the curve can then be done with:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#discov_curv %&gt;% </span></span>
+<span><span class="co">#  ggplot(aes(x=num_loci, xend=num_loci, y=lower_CI, yend=upper_CI))+</span></span>
+<span><span class="co">#  geom_segment()+</span></span>
+<span><span class="co">#  geom_point(aes(x=num_loci, y=lower_CI), shape="-", size=6)+</span></span>
+<span><span class="co">#  geom_point(aes(x=num_loci, y=upper_CI), shape="-", size=6)+</span></span>
+<span><span class="co">#  scale_y_continuous(n.breaks = 4)+</span></span>
+<span><span class="co">#  geom_line(aes(x=num_loci, y=median),linetype="dashed", size=0.5, color="#3b3b3b")+</span></span>
+<span><span class="co">#  geom_segment()+</span></span>
+<span><span class="co">#  geom_point(aes(x=num_loci, y=lower_CI), shape="-", size=6)+</span></span>
+<span><span class="co">#  geom_point(aes(x=num_loci, y=upper_CI), shape="-", size=6)+</span></span>
+<span><span class="co">#  facet_wrap(~ threshold, scales = "free_y")+</span></span>
+<span><span class="co">#  ylab("Unique genotypes")+</span></span>
+<span><span class="co">#  xlab("Nb of loci")+</span></span>
+<span><span class="co">#  theme_bw() </span></span></code></pre></div>
+<p>The probability of identity function can be called with: (in
+progress…)</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span> <span class="co"># prob_identity(mydata = mydata,</span></span>
+<span> <span class="co">#  loci_column_start =15,## The first locus column</span></span>
+<span> <span class="co">#  loci_column_end = 40)## The last locus column</span></span></code></pre></div>
+<p>And plotted with:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># prob$plot + theme_classic()+ </span></span>
+<span><span class="co">#  scale_color_manual(values = c("#852525", "#1e2aa7"))</span></span></code></pre></div>
   </main>
 </div>
 
