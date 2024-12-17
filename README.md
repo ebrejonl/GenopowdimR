@@ -1,4 +1,4 @@
-# GENOtyping by POWerful DIstance Matrix in C++ <img src="man/figures/program_logo.png" align="right" height="50">
+# GENOtyping by POWerful DIstance Matrix in C++ <img src="man/figures/program_logo.png" align="right" height="100">
 
 
 
