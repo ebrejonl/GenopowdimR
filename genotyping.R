@@ -8,6 +8,22 @@ library(Rcpp)
 
 sourceCpp("CPP2.cpp")
 
+#'
+#'  @param df dataframe containing individuals in rows and loci in columns
+#'  @param loci_column_start integer, column number of the first locus to be included in the analysis. If the df only contains loci, then it should be set to 1
+#'  @param loci_column_end integer, column number of the last locus to be included in the analysis. 
+#'  @param NA_weight numeric, importance given to NAs when considering a mismatch for a locus. Shoud be set as 0 for dataset with decent amount of missing values, otherwise can be set to up to 0.8 if confident nas are meaningful.
+#'  @param n_thresholds integer, number of maximum mismatches threshold values to be allowed between same genotypes. I recommend at least 2. 'n_threshold=2' means there will be three additionnal columns to the original df, with genotypes when allowing 0 mismatch, 1 mismatch and 2, respectfully. 
+#'  @param min_common_loci integer, minimum number of shared non missing loci between two individuals to be include the comparison in the algorythm. I suggest testing mutliple values depending on the number of missing values in the dataset. In a nearperfect dataset, this could be set to the total number of loci. 
+#'
+#'  @return A dataframe with genotype labels added as X new columns, according to n_thresholds parameter.
+#'
+#'
+#'
+#'
+#'
+#'
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MAIN FUNCTION : genotyping ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 compute_genotype_labels <- function(df, loci_column_start, loci_column_end, NA_weight, n_thresholds, min_common_loci) {
   dist_matrix <- calculate_distances(as.matrix(df[, loci_column_start:loci_column_end]), NA_weight, min_common_loci)
