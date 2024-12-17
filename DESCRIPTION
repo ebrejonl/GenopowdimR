@@ -13,3 +13,7 @@ Imports:
     tidyverse,
     Rcpp,
     fastcluster
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,28 @@
+---
+title: "GenopowdimR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{GenopowdimR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(GenopowdimR)
+```
+
+```{r}
+system.time(mydata_new2 <- compute_genotype_labels(df = mydata, 
+                                      loci_column_start =15, ## The first locus column
+                                      loci_column_end = 40, ## The last locus column
+                                      NA_weight = 0,  ## The importance of a "NA mismatch"
+                                      n_thresholds = 2,
+                                      min_common_loci =6)) 
+```
