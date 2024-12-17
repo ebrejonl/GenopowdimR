@@ -6,9 +6,9 @@
 
 
 ### Introduction:
-This package main purpose is to make genotyping microsatellite data, a process that can easily take days to weeks according to the number of loci and individuals, but making it almost instantaneous by utulizing the power of C++ for distance matrix calculation.
+Assigning genotypes to microsatellite data can easily take days to weeks to run, depending on the number of loci and individuals. GenopowdimR makes it almost instantaneous by utulizing the power of C++ for distance matrix calculation.
 
-In this package is included:
+#### In this package is included:
 - A genotype assignment function
 - A genotype discovery curve computation with bootstraps
 - Probability of identity (adapted from Paetkau and Strobeck (1994)) -> in progress
