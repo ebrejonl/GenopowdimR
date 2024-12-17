@@ -21,4 +21,4 @@ Assigning genotypes to microsatellite data can easily take days to weeks to run,
 
 
 ### how to cite:
-If you use, please cite the accompagning paper : Brejon Lamartinière et al, 
+If you use, please cite the accompagning paper : (incoming)
