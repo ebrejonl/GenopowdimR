@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 library(GenopowdimR)
 ```
 
+The genotype assignment function can be called with:
 ```{r}
  #system.time(mydata_new_with_genotype <- compute_genotype_labels(df = mydata, 
  #                                      loci_column_start =15, ## The first locus column
@@ -26,3 +27,46 @@ library(GenopowdimR)
  #                                      n_thresholds = 2,
  #                                      min_common_loci =6)) 
 ```
+
+The discovery curve function can be called with:
+```{r}
+ # discov_curv <- genotype_discovery_curve( mydata[,15:40], # genetics only
+ #                                         max_loci = 13, # n microsatellites
+ #                                         NA_weight = 0,
+ #                                        n_thresholds = 3,
+ #                                        n_bootstrap = 12,
+ #                                        min_common_loci=1)) #Where to start the curve # Too much more than nb of loci don't make sense!
+
+```
+
+plotting the curve can then be done with:
+```{r}
+#discov_curv %>% 
+#  ggplot(aes(x=num_loci, xend=num_loci, y=lower_CI, yend=upper_CI))+
+#  geom_segment()+
+#  geom_point(aes(x=num_loci, y=lower_CI), shape="-", size=6)+
+#  geom_point(aes(x=num_loci, y=upper_CI), shape="-", size=6)+
+#  scale_y_continuous(n.breaks = 4)+
+#  geom_line(aes(x=num_loci, y=median),linetype="dashed", size=0.5, color="#3b3b3b")+
+#  geom_segment()+
+#  geom_point(aes(x=num_loci, y=lower_CI), shape="-", size=6)+
+#  geom_point(aes(x=num_loci, y=upper_CI), shape="-", size=6)+
+#  facet_wrap(~ threshold, scales = "free_y")+
+#  ylab("Unique genotypes")+
+#  xlab("Nb of loci")+
+#  theme_bw() 
+```
+
+The probability function can be called with: (in progress...)
+
+```{r}
+ prob_identity(mydata = mydata,
+  loci_column_start =15,## The first locus column
+  loci_column_end = 40)## The last locus column
+ ```
+
+And plotted with: 
+```{r}
+ prob$plot + theme_classic()+ 
+  scale_color_manual(values = c("#852525", "#1e2aa7"))
+ ```
