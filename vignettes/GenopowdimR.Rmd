@@ -56,16 +56,16 @@ plotting the curve can then be done with:
 #  theme_bw() 
 ```
 
-The probability function can be called with: (in progress...)
+The probability of identity function can be called with: (in progress...)
 
 ```{r}
- prob_identity(mydata = mydata,
-  loci_column_start =15,## The first locus column
-  loci_column_end = 40)## The last locus column
+ # prob_identity(mydata = mydata,
+ #  loci_column_start =15,## The first locus column
+ #  loci_column_end = 40)## The last locus column
 ```
 
 And plotted with: 
 ```{r}
- prob$plot + theme_classic()+ 
-  scale_color_manual(values = c("#852525", "#1e2aa7"))
+# prob$plot + theme_classic()+ 
+#  scale_color_manual(values = c("#852525", "#1e2aa7"))
 ```
