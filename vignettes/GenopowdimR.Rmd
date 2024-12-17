@@ -36,7 +36,6 @@ The discovery curve function can be called with:
  #                                        n_thresholds = 3,
  #                                        n_bootstrap = 12,
  #                                        min_common_loci=1)) #Where to start the curve # Too much more than nb of loci don't make sense!
-
 ```
 
 plotting the curve can then be done with:
@@ -63,10 +62,10 @@ The probability function can be called with: (in progress...)
  prob_identity(mydata = mydata,
   loci_column_start =15,## The first locus column
   loci_column_end = 40)## The last locus column
- ```
+```
 
 And plotted with: 
 ```{r}
  prob$plot + theme_classic()+ 
   scale_color_manual(values = c("#852525", "#1e2aa7"))
- ```
+```
