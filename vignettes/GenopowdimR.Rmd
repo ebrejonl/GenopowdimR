@@ -19,7 +19,7 @@ library(GenopowdimR)
 ```
 
 ```{r}
-system.time(mydata_new2 <- compute_genotype_labels(df = mydata, 
+system.time(mydata_new_with_genotype <- compute_genotype_labels(df = mydata, 
                                       loci_column_start =15, ## The first locus column
                                       loci_column_end = 40, ## The last locus column
                                       NA_weight = 0,  ## The importance of a "NA mismatch"
