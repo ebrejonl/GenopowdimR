@@ -1,5 +1,5 @@
 # GENOtyping by POWerful DIstance Matrix in C++ 
-<img src="man/figures/program_logo.png" style="float:right; height:300px;">
+<img src="man/figures/program_logo.png" alt="logo" style="float:right; height:300px;">
 
 
 
