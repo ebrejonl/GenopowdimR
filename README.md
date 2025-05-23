@@ -10,6 +10,5 @@ Assigning genotypes with microsatellite (or indels, or similar) data can easily 
 - A genotype ~ loci discovery curve (with bootstraps)
 - Probability of identity (adapted from Paetkau and Strobeck (1994)) -> in progress
 
-
 ### how to cite:
 If you use, please cite the accompagning paper : (in prep)
