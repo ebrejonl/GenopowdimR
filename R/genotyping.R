@@ -1,10 +1,12 @@
+packages <- c("purrr", "tidyverse", "fastcluster", "parallel", "parallelDist", "Rcpp")
+install_if_missing <- function(pkg) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg)
+  }
+  library(pkg, character.only = TRUE)
+}
 
-library(purrr)
-library(tidyverse)
-library(fastcluster)
-library(parallel)
-library(parallelDist)
-library(Rcpp)
+invisible(lapply(packages, install_if_missing))
 
 sourceCpp("Cpp/CPP2.cpp")
 
