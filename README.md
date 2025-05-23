@@ -1,16 +1,11 @@
-# GENOtyping by POWerful DIstance Matrix in C++
-<img
-  src="vignettes/program_logo.png"
-  alt="GenoPowDiR logo"
-  style="float:right; height:300px;"
->
-
+# GENOtyping by POWerful DIstance Matrix in C++ 
+<img src="man/figures/program_logo.png" style="float:right; height:300px;">
 
 
 
 
 ### Introduction:
-Assigning genotypes with microsatellite (or similar, like indels) data can easily take days to weeks to run, depending on the number of loci and individuals. GenopowdimR makes it almost instantaneous by utilizing the power of C++ for distance matrix calculation.
+Assigning genotypes with microsatellite (or indels, or similar) data can easily take days to weeks to run, depending on the number of loci and individuals. GenopowdimR makes it almost instantaneous by utilizing the power of C++ for distance matrix calculation.
 
 #### In this package is included:
 - A genotype assignment function
