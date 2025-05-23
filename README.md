@@ -2,7 +2,6 @@
 ![](man/figures/program_logo.png){style="float:right; height:300px;"}
 
 
-
 ### Introduction:
 Assigning genotypes with microsatellite (or indels, or similar) data can easily take days to weeks to run, depending on the number of loci and individuals. GenopowdimR makes it almost instantaneous by utilizing the power of C++ for distance matrix calculation.
 
