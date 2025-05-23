@@ -6,7 +6,7 @@
 
 
 ### Introduction:
-Assigning genotypes with microsatellite data can easily take days to weeks to run, depending on the number of loci and individuals. GenopowdimR makes it almost instantaneous by utilizing the power of C++ for distance matrix calculation.
+Assigning genotypes with microsatellite (or similar, like indels) data can easily take days to weeks to run, depending on the number of loci and individuals. GenopowdimR makes it almost instantaneous by utilizing the power of C++ for distance matrix calculation.
 
 #### In this package is included:
 - A genotype assignment function
