@@ -11,13 +11,5 @@ Assigning genotypes with microsatellite (or indels, or similar) data can easily 
 - Probability of identity (adapted from Paetkau and Strobeck (1994)) -> in progress
 
 
-
-### Getting started: 
-install the package with
-library(devtools)
-install_github("ebrejonl/GenopowdimR")
-
-
-
 ### how to cite:
 If you use, please cite the accompagning paper : (in prep)
