@@ -1,0 +1,9 @@
+pandoc: 2.9.2.1
+pkgdown: 2.1.2
+pkgdown_sha: ~
+articles:
+  GenopowdimR: GenopowdimR.html
+last_built: 2025-05-23T09:25Z
+urls:
+  reference: https://ebrejonl.github.io/GenopowdimR/reference
+  article: https://ebrejonl.github.io/GenopowdimR/articles
