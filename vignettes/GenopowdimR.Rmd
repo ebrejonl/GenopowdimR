@@ -15,6 +15,8 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
+library(devtools)
+install_github("ebrejonl/GenopowdimR")
 library(GenopowdimR)
 ```
 
