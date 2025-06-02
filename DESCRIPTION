@@ -12,7 +12,11 @@ RoxygenNote: 7.3.2
 Imports:
     tidyverse,
     Rcpp,
-    fastcluster
+    fastcluster,
+    adegenet,
+    purrr,
+    parallel,
+    parallelDist
 Suggests: 
     knitr,
     rmarkdown

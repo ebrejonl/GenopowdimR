@@ -1,4 +1,4 @@
-packages <- c("purrr", "tidyverse", "fastcluster", "parallel", "parallelDist", "Rcpp")
+packages <- c("purrr", "tidyverse", "fastcluster", "parallel", "parallelDist", "Rcpp", "adegenet")
 install_if_missing <- function(pkg) {
   if (!requireNamespace(pkg, quietly = TRUE)) {
     install.packages(pkg)
