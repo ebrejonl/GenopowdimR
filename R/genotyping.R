@@ -174,8 +174,8 @@ merged_data <- lapply(unique_loci, function(locus) {
 merged_data <- as.data.frame(do.call(cbind, merged_data))
 colnames(merged_data) <- unique_loci
 # get the data in genind format
-genind_obj <- df2genind(merged_data, ploidy = 2,  sep=",", NA.char = "x")
+genind_obj <- adegenet::df2genind(merged_data, ploidy = 2,  sep=",", NA.char = "x")
 genind_obj@all.names
-pid_perm <- pid_permute(obj = genind_obj, 1000)
+pid_perm <- PopGenUtils::pid_permute(obj = genind_obj, 1000)
   return(pid_perm)
 }
