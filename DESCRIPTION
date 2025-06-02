@@ -16,7 +16,8 @@ Imports:
     adegenet,
     purrr,
     parallel,
-    parallelDist
+    parallelDist,
+    PopGenUtils
 Suggests: 
     knitr,
     rmarkdown

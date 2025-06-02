@@ -1,4 +1,4 @@
-packages <- c("purrr", "tidyverse", "fastcluster", "parallel", "parallelDist", "Rcpp", "adegenet")
+packages <- c("purrr", "tidyverse", "fastcluster", "parallel", "parallelDist", "Rcpp", "adegenet", "PopGenUtils")
 install_if_missing <- function(pkg) {
   if (!requireNamespace(pkg, quietly = TRUE)) {
     install.packages(pkg)
@@ -139,7 +139,7 @@ insert_empty_rows <- function(df) {
 ## integration of PopGenUtils prob_identity package
 library(adegenet)
 library(devtools)
-library("PopGenUtils")
+library(PopGenUtils)
 
 # here, we use: 
 #PID​(locus)=∑i=1n​pi4​+∑i=1n​∑j=i+1n​(2pi2​pj2​)
