@@ -1,6 +1,6 @@
 #include <Rcpp.h>
 using namespace Rcpp;
-
+// [[Rcpp::export]]
 NumericMatrix calculate_distances(CharacterMatrix genetics, double NA_weight,  int min_common_loci) {
     int n = genetics.nrow();       
     int m = genetics.ncol();       
