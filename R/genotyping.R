@@ -25,7 +25,7 @@ sourceCpp("Cpp/CPP2.cpp")
 #'
 #'
 #'
-
+#' @export
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MAIN FUNCTION : genotyping ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 compute_genotype_labels <- function(df, loci_column_start, loci_column_end, NA_weight, n_thresholds, min_common_loci) {
   dist_matrix <- calculate_distances(as.matrix(df[, loci_column_start:loci_column_end]), NA_weight, min_common_loci)
@@ -43,6 +43,7 @@ compute_genotype_labels <- function(df, loci_column_start, loci_column_end, NA_w
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~ Discovery curve ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#' @export
 select_random_microsatellites <- function(df, num_loci) {
   loci_names <- unique(gsub("a|b", "", colnames(df)))
   selected_loci <- sample(loci_names, num_loci)
@@ -52,6 +53,7 @@ select_random_microsatellites <- function(df, num_loci) {
   return(df[, selected_columns])
 }
 
+#' @export
 bootstrap_unique_individuals <- function(df, num_loci, NA_weight, n_thresholds, n_bootstrap, min_common_loci) {
   threshold_sequence <- seq(0, n_thresholds, by = 1)
   n_thresholds_length <- length(threshold_sequence)
@@ -74,7 +76,7 @@ bootstrap_unique_individuals <- function(df, num_loci, NA_weight, n_thresholds, 
 
 
 
-
+#' @export
 genotype_discovery_curve <- function(df, max_loci, NA_weight, n_thresholds, n_bootstrap, min_common_loci) {
   threshold_sequence <- seq(0, n_thresholds, by = 1)
   n_thresholds_length <- length(threshold_sequence)
@@ -100,7 +102,7 @@ genotype_discovery_curve <- function(df, max_loci, NA_weight, n_thresholds, n_bo
 
 
 #####~~~~~~~~~~~~~~~~~~~~~~~~~~~ Output the genotypes only seperated by spaces (for manual double checking ~~~~~~~~~~~~~~~~~~~~~~#####
-
+#' @export
 # Function to add empty rows between groups of different genotypes
 make_genet_file <- function(mydata, group_col) {
   # Step 1: Sort the dataframe by the 'group_col'
@@ -142,7 +144,7 @@ library("PopGenUtils")
 #The overall PIDPID​ for multiple loci is:
 #
 #PID(overall)=∏l=1LPID(locusl)PID​(overall)=∏l=1L​PID​(locusl​)
-
+#' @export
 prob_identity <- function(mydata, loci_column_start,loci_column_end){ ## Loci only
 
 microsat_data <-mydata[, loci_column_start:loci_column_end]
