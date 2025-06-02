@@ -8,7 +8,7 @@ install_if_missing <- function(pkg) {
 
 invisible(lapply(packages, install_if_missing))
 
-sourceCpp("Cpp/CPP2.cpp")
+# sourceCpp("Cpp/CPP2.cpp") not needed?
 
 #'
 #'  @param df dataframe containing individuals in rows and loci in columns
@@ -19,7 +19,10 @@ sourceCpp("Cpp/CPP2.cpp")
 #'  @param min_common_loci integer, minimum number of shared non missing loci between two individuals to be include the comparison in the algorythm. I suggest testing mutliple values depending on the number of missing values in the dataset. In a nearperfect dataset, this could be set to the total number of loci. 
 #'
 #'  @return A dataframe with genotype labels added as X new columns, according to n_thresholds parameter.
-#'
+#' 
+#' 
+#' @useDynLib GenopowdimR, .registration = TRUE
+#' @importFrom Rcpp sourceCpp
 #'
 #'
 #'

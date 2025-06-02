@@ -22,3 +22,4 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 URL: https://ebrejonl.github.io/GenopowdimR/
+LinkingTo: Rcpp
